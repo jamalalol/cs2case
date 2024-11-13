@@ -22,3 +22,39 @@ function openCase() {
     // Отображение результата на экране
     resultDiv.innerHTML = `<p style="color: ${item.color};">${item.rarity} - ${item.name}</p>`;
 }
+#balance {
+    font-size: 1.2em;
+    margin-top: 10px;
+    color: #FFD700;
+}
+
+#inventory {
+    margin-top: 50px;
+    color: #fff;
+}
+
+#inventory h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+#inventory-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+#inventory-list li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+#result {
+    margin-top: 30px;
+    font-size: 1.5em;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+}
