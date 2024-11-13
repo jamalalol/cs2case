@@ -9,11 +9,16 @@
 <body>
     <header>
         <h1>Открытие кейсов Counter-Strike 2</h1>
+        <div id="balance">Баланс: <span id="balance-value">500</span> кредитов</div>
     </header>
     <main>
         <section id="case-opening">
-            <button onclick="openCase()">Открыть кейс</button>
+            <button onclick="openCase()">Открыть кейс (100 кредитов)</button>
             <div id="result"></div>
+        </section>
+        <section id="inventory">
+            <h2>Ваш инвентарь</h2>
+            <ul id="inventory-list"></ul>
         </section>
     </main>
     <script src="script.js"></script>
