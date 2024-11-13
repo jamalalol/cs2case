@@ -1,43 +1,49 @@
 * {
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
-    font-family: Arial, sans-serif;
+    background-color: #1d1f21;
+    color: #ffffff;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #2b2b2b;
-    color: #fff;
     margin: 0;
     padding: 0;
 }
 
 header {
-    background-color: #1e1e1e;
-    width: 100%;
+    background-color: #282b30;
     padding: 20px;
     text-align: center;
+    width: 100%;
 }
 
 h1 {
-    margin: 0;
     font-size: 2em;
+    margin: 0;
+}
+
+#balance {
+    margin-top: 5px;
+    font-size: 1.2em;
+    color: #FFD700;
 }
 
 #case-opening {
-    margin-top: 50px;
+    margin-top: 20px;
     text-align: center;
 }
 
 button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    color: #ffffff;
     background-color: #4caf50;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2em;
-    color: white;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
@@ -45,24 +51,41 @@ button:hover {
     background-color: #45a049;
 }
 
-#result {
-    margin-top: 30px;
-    font-size: 1.5em;
+#scroll-animation {
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    margin-top: 20px;
+    background-color: #2b2e33;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
-#balance {
-    font-size: 1.2em;
+
+#scroll-content {
+    display: flex;
+    width: calc(100px * 15); /* Предметы для прокрутки */
+    animation: scroll 3s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-100px * 12)); }
+}
+
+#result {
     margin-top: 10px;
-    color: #FFD700;
+    font-size: 1.5em;
 }
 
 #inventory {
-    margin-top: 50px;
-    color: #fff;
+    margin-top: 40px;
+    color: #ffffff;
 }
 
 #inventory h2 {
     font-size: 1.5em;
-    margin-bottom: 20px;
 }
 
 #inventory-list {
@@ -71,17 +94,29 @@ button:hover {
 }
 
 #inventory-list li {
+    display: flex;
+    align-items: center;
+    padding: 5px 10px;
+    background: #2b2b2b;
+    border-radius: 5px;
+    margin-top: 10px;
     font-size: 1.1em;
-    margin: 10px 0;
 }
 
-#result {
-    margin-top: 30px;
-    font-size: 1.5em;
-    opacity: 0;
-    transition: opacity 0.5s ease-in-out;
+.sell-button {
+    margin-left: auto;
+    background-color: #dc143c;
+    color: #ffffff;
+    padding: 5px 10px;
+    cursor: pointer;
+    border: none;
+    border-radius: 3px;
+    transition: background-color 0.3s;
 }
 
-.show {
+.sell-button:hover {
+    background-color: #c81236;
+}
+
     opacity: 1;
 }
